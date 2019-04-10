@@ -1,0 +1,43 @@
+{
+  "format_version": 1,
+  "imports": [{
+    "target_table": "KUNDE",
+    "source_data": {
+      "data_type": "CSV",
+      "file_name": "data_kunde.csv",
+      "has_header": true,
+      "dialect": "HANA",
+      "type_config": {
+        "delimiter": ","
+      }
+    },
+    "import_settings": {"include_filter" : [ ], "import_columns": ["KID", "NAME"]},
+    "column_mappings": {"KID": 1, "NAME": 2}
+  }, {
+    "target_table": "STATUS",
+    "source_data": {
+      "data_type": "CSV",
+      "file_name": "data_status.csv",
+      "has_header": true,
+      "dialect": "HANA",
+      "type_config": {
+        "delimiter": ","
+      }
+    },
+    "import_settings": {"include_filter" : [ ], "import_columns": ["SID", "STATUS"]},
+    "column_mappings": {"SID": 1, "STATUS": 2}
+  }, {
+    "target_table": "BESTELLUNG",
+    "source_data": {
+      "data_type": "CSV",
+      "file_name": "data_bestellung.csv",
+      "has_header": true,
+      "dialect": "HANA",
+      "type_config": {
+        "delimiter": ","
+      }
+    },
+    "import_settings": {"include_filter" : [ ], "import_columns": ["BID", "BESTELLDATUM", "KID_KID", "SID_SID"]},
+    "column_mappings": {"BID": 1, "BESTELLDATUM": 2, "KID_KID": 3, "SID_SID": 4}
+  }]
+}

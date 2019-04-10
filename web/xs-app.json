@@ -1,0 +1,33 @@
+{
+	"welcomeFile": "index.html",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutPage": "/logout.html",
+		"logoutEndpoint": "/my/logout"
+	},
+	"routes": [{
+		"source": "/odata/(.*)",
+		"destination": "srv_api",
+		"csrfProtection": true,
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "/node(.*)",
+		"destination": "srv_api",
+		"csrfProtection": true,
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "/(.*)",
+		"localDir": "resources",
+		"authenticationType": "xsuaa",
+		"replace": {
+			"pathSuffixes": [
+				"index.html"
+			],
+			"services": {
+				"sapui5_sb": {
+					"tag": "ui5"
+				}
+			}
+		}
+	}]
+}
