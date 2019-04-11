@@ -10,7 +10,25 @@
 		  sorter: {
 				path: 'AID'
 		  }
-        }">
+        }"
+      mode="SingleSelectLeft"
+      selectionChange="">
+      <headerToolbar>
+        <OverflowToolbar>
+          <content>
+            <Button
+                    id="refreshArtikelButton"
+                    icon="sap-icon://refresh"
+                    tooltip="Refresh"
+                    press="onRefreshArtikel"/>
+            <Button
+                    id="deleteArtikelButton"
+                    icon="sap-icon://delete"
+                    tooltip="Delete"
+                    press="onDeleteArtikel"/>
+          </content>
+        </OverflowToolbar>
+      </headerToolbar>
         <columns>
           <Column id="iAidColumn">
             <Text text="AID" />
