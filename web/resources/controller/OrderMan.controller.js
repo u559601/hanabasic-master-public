@@ -31,8 +31,8 @@ sap.ui.define(
                 this.setModel(oArtikelModel, "a");
 			},
 
-			onCreateCustomer: function () { this.onCreateItem(this.getModel("c"),"tableCustomers", "Kunden");},
-			onCreateArtikel: function () { this.onCreateItem(this.getModel("a"),"tableArtikel", "Artikel");},
+			onCreateCustomer: function () { this.onCreateItem(this.getModel("c").getData(),"tableCustomers", "Kunden");},
+			onCreateArtikel: function () { this.onCreateItem(this.getModel("a").getData(),"tableArtikel", "Artikel");},
 			onCreateOrder: function () {
 				var order = this.getModel("o").getData();
 				order.KID_KID = this.getSelectedItemId("tableCustomers");
@@ -53,7 +53,6 @@ sap.ui.define(
 			},
 
 			onCreateItem: function (newItem, tableId, message) {
-				console.log("save :" + newItem);
 				// var oOdataModel = this.getModel("orderMan");
 				var oBinding = this.byId(tableId).getBinding("items");
 				var oContext = oBinding.create(newItem);
