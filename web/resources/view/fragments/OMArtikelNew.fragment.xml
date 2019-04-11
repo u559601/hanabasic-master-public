@@ -5,7 +5,7 @@
 			<Input id="iAID" type="Text" class="sapUiSmallMarginBottom" value="{a>/AID}"/>
 			<Label text="Beschreibung" labelFor="iBeschreibung"/>
 			<Input id="iBeschreibung" type="Text" class="sapUiSmallMarginBottom" value="{a>/Beschreibung}"/>
-			<Button text="Anlegen" press="onCreateItem('artikel')"/>
+			<Button text="Anlegen" press="onCreateItem"/>
 		</content>
 	</Panel>
 </core:FragmentDefinition>
