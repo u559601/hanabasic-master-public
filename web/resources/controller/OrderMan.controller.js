@@ -35,7 +35,7 @@ sap.ui.define(
 			},
 
 			onCreateItem: function (oEvent) {
-				console.log(JSON.stringify(oEvent));
+				console.log(oEvent);
 				var modelName;
 				var tableId;
 				switch(oEvent) {
@@ -50,9 +50,12 @@ sap.ui.define(
 					default:
 					// code block
 				}
+				console.log("modelName:" + modelName);
+				console.log("tableId:" + tableId);
+
 				// var oOdataModel = this.getModel("orderMan");
-				var oNewItem = this.getModel(modelName).getData();
-				var oBinding = this.byId(tableId).getBinding("items");
+				var oNewItem = this.getModel("c").getData();
+				var oBinding = this.byId("tableCustomers").getBinding("items");
 				var oContext = oBinding.create(oNewItem);
 
 				oContext.created().then(
