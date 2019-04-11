@@ -15,7 +15,23 @@
 		  sorter: {
 				path: 'BID'
 		  }
-        }">
+        }"
+                   mode="SingleSelectLeft"
+                   selectionChange="">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Button
+                                    icon="sap-icon://refresh"
+                                    tooltip="Refresh"
+                                    press="onRefreshOrder"/>
+                            <Button
+                                    icon="sap-icon://delete"
+                                    tooltip="Delete"
+                                    press="onDeleteOrder"/>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
                 <columns>
                     <Column id="bidColumn">
                         <Text text="BID" />
