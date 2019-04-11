@@ -10,23 +10,7 @@
 		  sorter: {
 				path: 'PID'
 		  }
-        }"
-             mode="SingleSelectLeft"
-             selectionChange="">
-        <headerToolbar>
-          <OverflowToolbar>
-            <content>
-              <Button
-                      icon="sap-icon://refresh"
-                      tooltip="Refresh"
-                      press="onRefreshOrderPos"/>
-              <Button
-                      icon="sap-icon://delete"
-                      tooltip="Delete"
-                      press="onDeleteOrderPos"/>
-            </content>
-          </OverflowToolbar>
-        </headerToolbar>
+        }">
         <columns>
           <Column id="pidColumn">
             <Text text="PID" />
