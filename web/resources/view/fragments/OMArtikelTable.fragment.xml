@@ -3,7 +3,7 @@
     <content>
       <Table id="tableArtikel" growing="true" growingThreshold="6"
         items="{
-          path: 'orderMan>/Artikel',
+          path: 'orderMan>/Artikeln',
           parameters : {
         	$$operationMode : 'Server'
           },
