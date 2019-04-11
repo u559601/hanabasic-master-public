@@ -54,7 +54,7 @@ sap.ui.define(
 
 			onCreateItem: function (newItem, tableId, message) {
 				// var oOdataModel = this.getModel("orderMan");
-				console.log("to be saved: "+ newItem);
+				console.log("to be saved: "+ JSON.stringify(newItem));
 				var oBinding = this.byId(tableId).getBinding("items");
 				var oContext = oBinding.create(newItem);
 
