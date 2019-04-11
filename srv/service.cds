@@ -51,5 +51,7 @@ service orderman {
 			DeleteRestrictions: {Deletable: true}
 		}
 	) as projection on Artikel;
+	
+	//test
 
 }
