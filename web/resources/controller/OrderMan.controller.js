@@ -14,16 +14,16 @@ sap.ui.define(
                 var oOrderModel = new JSONModel({
                     "BID": "b1",
                     "Bestelldatum": "20180210",
-                    "KID": "k1",
-                    "SID": "s1"
+                    "KID_SID": "k1",
+                    "SID_SID": "s1"
                 });
                 this.setModel(oOrderModel, "o");
 
                 var oOrderPositionModel = new JSONModel({
                     "PID": "p1",
                     "Menge": "0",
-                    "BID": "b1",
-                    "AID": "a1"
+                    "BID_BID": "b1",
+                    "AID_AID": "a1"
                 });
                 this.setModel(oOrderPositionModel, "op");
 
