@@ -57,8 +57,6 @@ sap.ui.define(
 				var oBinding = this.byId(tableId).getBinding("items");
 				var oContext = oBinding.create(newItem);
 
-				console.log("JSON:" + JSON.stringify(newItem));
-
 				oContext.created().then(
 					function () {
 						MessageToast.show(message + ' angelegt.');
