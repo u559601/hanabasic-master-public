@@ -18,13 +18,11 @@
 					<OverflowToolbar>
 						<content>
 							<Button 
-								id="refreshUserButton1"
-								icon="sap-icon://refresh" 
+								icon="sap-icon://refresh"
 								tooltip="Refresh"
 								press="onRefreshUser"/>
 							<Button 
-								id="deleteUserButton1"
-								icon="sap-icon://delete" 
+								icon="sap-icon://delete"
 								tooltip="Delete"
 								press="onDeleteUser"/>
 						</content>

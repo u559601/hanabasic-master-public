@@ -21,12 +21,10 @@
                     <OverflowToolbar>
                         <content>
                             <Button
-                                    id="refreshOrderButton"
                                     icon="sap-icon://refresh"
                                     tooltip="Refresh"
                                     press="onRefreshOrder"/>
                             <Button
-                                    id="deleteOrderButton"
                                     icon="sap-icon://delete"
                                     tooltip="Delete"
                                     press="onDeleteOrder"/>
