@@ -55,8 +55,13 @@ sap.ui.define(
 				this.onUpdate();
 			},
 
-			onRefreshUser: function () {
-				var oBinding = this.byId("tableCustomers").getBinding("items");
+            onRefreshUser: function () {this.refreshTable("tableCustomers")},
+			onRefreshOrder: function () {this.refreshTable("tableOrders")},
+			onRefreshOrderPos: function () {this.refreshTable("tableOrdersPos")},
+			onRefreshArtikel: function () {this.refreshTable("tableArtikel")},
+
+			refreshTable: function (tableName) {
+				var oBinding = this.byId(tableName).getBinding("items");
 
 				if (oBinding.hasPendingChanges()) {
 					MessageBox.error("Refresh nicht möglich");
@@ -67,6 +72,9 @@ sap.ui.define(
 			},
 
 			onDeleteUser : function () { this.deleteSelectedFromTable("tableCustomers")},
+			onDeleteOrder : function () { this.deleteSelectedFromTable("tableOrders")},
+			onDeleteOrderPos : function () { this.deleteSelectedFromTable("tableOrdersPos")},
+			onDeleteArtikel : function () { this.deleteSelectedFromTable("tableArtikel")},
 
 			deleteSelectedFromTable: function (tableName) {
 				var oSelected = this.byId(tableName).getSelectedItem();
