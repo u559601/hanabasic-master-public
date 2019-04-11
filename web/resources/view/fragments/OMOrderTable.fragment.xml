@@ -23,10 +23,10 @@
           <Column id="dateColumn">
             <Text text="Bestelldatum" />
           </Column>
-          <Column id="kidColumn1">
+          <Column id="fskidColumn">
             <Text text="KID" />
           </Column>
-          <Column id="sidColumn">
+          <Column id="fssidColumn">
             <Text text="SID" />
           </Column>
         </columns>
