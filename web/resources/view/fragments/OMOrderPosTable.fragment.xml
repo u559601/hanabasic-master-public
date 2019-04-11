@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Panel headerText="Bestellpositiontabelle" class="sapUiResponsiveMargin" width="auto">
+    <content>
+      <Table id="tableOrdersPos" growing="true" growingThreshold="6"
+        items="{
+          path: 'orderMan>/Bestellpositionen',
+          parameters : {
+        	$$operationMode : 'Server'
+          },
+          filters : { 
+                path : 'BID_BID',
+                operator : 'EQ',
+                value : 'none'
+          },
+		  sorter: {
+				path: 'PID'
+		  }
+        }">
+        <columns>
+          <Column id="pidColumn">
+            <Text text="PID" />
+          </Column>
+          <Column id="mengeColumn">
+            <Text text="Menge" />
+          </Column>
+          <Column id="bidColumn1">
+            <Text text="BID" />
+          </Column>
+          <Column id="aidColumn">
+            <Text text="AID" />
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{orderMan>PID}" />
+            </cells>
+            <cells>
+              <Text text="{orderMan>Menge}" />
+            </cells>
+            <cells>
+              <Text text="{orderMan>BID_BID}" />
+            </cells>
+            <cells>
+              <Text text="{orderMan>AID_AID}" />
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+  </Panel>
+</core:FragmentDefinition>

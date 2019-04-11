@@ -8,6 +8,7 @@
 					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMCustTable" type="XML"/>
 				</HBox>
 				<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderTable" type="XML"/>
+				<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderPosTable" type="XML"/>
 			</VBox>
 		</content>
 	</Page>
