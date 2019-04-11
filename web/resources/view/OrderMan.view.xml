@@ -9,7 +9,7 @@
 				</HBox>
 				<HBox>
 					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderNew" type="XML"/>
-					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMCustTable" type="XML"/>
+					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderTable" type="XML"/>
 
 				</HBox>
 				<HBox>
