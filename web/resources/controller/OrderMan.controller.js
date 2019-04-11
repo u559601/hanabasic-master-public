@@ -34,33 +34,19 @@ sap.ui.define(
                 this.setModel(oArtikelModel, "a");
 			},
 
-			onCreateItem: function (oEvent) {
-				console.log(oEvent);
-				var modelName;
-				var tableId;
-				switch(oEvent) {
-					case 'customer':
-						modelName = 'c';
-						tableId = 'tableCustomers';
-						break;
-					case 'artikel':
-						modelName = 'a';
-						tableId = 'tableArtikel';
-						break;
-					default:
-					// code block
-				}
-				console.log("modelName:" + modelName);
-				console.log("tableId:" + tableId);
+			onCreateCustomer: function () { this.onCreateItem("c","tableCustomers")},
+			onCreateArtikel: function () { this.onCreateItem("a","tableArtikel")},
 
+
+			onCreateItem: function (modelName, tableId) {
 				// var oOdataModel = this.getModel("orderMan");
-				var oNewItem = this.getModel("c").getData();
-				var oBinding = this.byId("tableCustomers").getBinding("items");
+				var oNewItem = this.getModel(modelName).getData();
+				var oBinding = this.byId(tableId).getBinding("items");
 				var oContext = oBinding.create(oNewItem);
 
 				oContext.created().then(
 					function () {
-						MessageToast.show(oEvent + ' angelegt.');
+						MessageToast.show(trigger + ' angelegt.');
 					},
 					function (error) {
 						MessageToast.show(error.responseText);
