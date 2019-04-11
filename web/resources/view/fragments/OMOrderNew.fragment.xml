@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Panel headerText="Bestellung erfassen" class="sapUiResponsiveMargin">
+		<content>
+			<Label text="BID" labelFor="iBID"/>
+			<Input id="iBID" type="Text" class="sapUiSmallMarginBottom" value="{o>/BID}"/>
+
+			<Label text="Bestelldatum" labelFor="iBestelldatum"/>
+			<Input id="iBestelldatum" type="Text" class="sapUiSmallMarginBottom" value="{o>/Bestelldatum}"/>
+
+			<Label text="KID" labelFor="iKID"/>
+			<Input id="iKID" type="Text" class="sapUiSmallMarginBottom" value="{o>/KID}"/>
+
+			<Label text="SID" labelFor="iSID"/>
+			<Input id="iSID" type="Text" class="sapUiSmallMarginBottom" value="{o>/SID}"/>
+
+			<Button text="Anlegen" press="onCreateOrder"/>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

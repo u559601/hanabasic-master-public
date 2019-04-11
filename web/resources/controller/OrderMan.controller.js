@@ -36,6 +36,8 @@ sap.ui.define(
 
 			onCreateCustomer: function () { this.onCreateItem("c","tableCustomers");},
 			onCreateArtikel: function () { this.onCreateItem("a","tableArtikel");},
+			onCreateOrder: function () { this.onCreateItem("o","tableOrders");},
+			onCreateOrderPos: function () { this.onCreateItem("op","tableOrdersPos");},
 
 
 			onCreateItem: function (modelName, tableId) {
