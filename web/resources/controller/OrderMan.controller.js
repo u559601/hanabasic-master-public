@@ -34,8 +34,8 @@ sap.ui.define(
                 this.setModel(oArtikelModel, "a");
 			},
 
-			onCreateCustomer: function () { this.onCreateItem("c","tableCustomers")},
-			onCreateArtikel: function () { this.onCreateItem("a","tableArtikel")},
+			onCreateCustomer: function () { this.onCreateItem("c","tableCustomers");},
+			onCreateArtikel: function () { this.onCreateItem("a","tableArtikel");},
 
 
 			onCreateItem: function (modelName, tableId) {
@@ -66,8 +66,10 @@ sap.ui.define(
 				MessageToast.show("Refresh erfolgreich");
 			},
 
-			onDeleteUser: function () {
-				var oSelected = this.byId("tableCustomers").getSelectedItem();
+			onDeleteUser : function () { this.deleteSelectedFromTable("tableCustomers")},
+
+			deleteSelectedFromTable: function (tableName) {
+				var oSelected = this.byId(tableName).getSelectedItem();
 
 				if (oSelected) {
 					oSelected.getBindingContext("orderMan").delete("$auto").then(function () {
