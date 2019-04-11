@@ -7,6 +7,11 @@
           parameters : {
         	$$operationMode : 'Server'
           },
+           filters : {
+                path : 'BID_BID',
+                operator : 'EQ',
+                value : 'none'
+          },
 		  sorter: {
 				path: 'PID'
 		  }

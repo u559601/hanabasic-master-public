@@ -13,14 +13,14 @@
 
 				</HBox>
 				<HBox>
-					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderPosNew" type="XML"/>
-					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderPosTable" type="XML"/>
-
-				</HBox>
-				<HBox>
 					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMArtikelNew" type="XML"/>
 					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMArtikelTable" type="XML"/>
 				</HBox>
+				<HBox>
+					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderPosNew" type="XML"/>
+					<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderPosTable" type="XML"/>
+				</HBox>
+
 			</VBox>
 		</content>
 	</Page>

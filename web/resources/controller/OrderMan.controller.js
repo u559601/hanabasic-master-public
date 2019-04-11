@@ -20,13 +20,12 @@ sap.ui.define(
 
                 var oOrderPositionModel = new JSONModel({
                     "PID": "p",
-                    "Menge": 1,
-                    "AID_AID": "a"
+                    "Menge": 1
                 });
                 this.setModel(oOrderPositionModel, "op");
 
                 var oArtikelModel = new JSONModel({
-                    "AID": "a1",
+                    "AID": "a",
                     "Beschreibung": "..."
                 });
                 this.setModel(oArtikelModel, "a");
@@ -42,6 +41,7 @@ sap.ui.define(
 			onCreateOrderPos: function () {
 				var orderposition = this.getModel("op").getData();
 				orderposition.BID_BID = this.getSelectedItemId("tableOrders");
+				orderposition.AID_AID = this.getSelectedItemId("tableArtikel");
 				this.onCreateItem(orderposition,"tableOrdersPos", "Bestellposition");},
 
 			getSelectedItemId: function (tableId) {
