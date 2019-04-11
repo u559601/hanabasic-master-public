@@ -1,8 +1,8 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
 	<Panel headerText="Bestellung erfassen" class="sapUiResponsiveMargin">
 		<content>
-			<Label text="BID" labelFor="iBID"/>
-			<Input id="iBID" type="Text" class="sapUiSmallMarginBottom" value="{o>/BID}"/>
+			<Label text="BID" labelFor="inBID"/>
+			<Input id="inBID" type="Text" class="sapUiSmallMarginBottom" value="{o>/BID}"/>
 
 			<Label text="Bestelldatum" labelFor="iBestelldatum"/>
 			<Input id="iBestelldatum" type="Text" class="sapUiSmallMarginBottom" value="{o>/Bestelldatum}"/>
