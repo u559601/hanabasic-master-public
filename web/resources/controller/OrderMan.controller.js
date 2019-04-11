@@ -14,7 +14,7 @@ sap.ui.define(
                 var oOrderModel = new JSONModel({
                     "BID": "b1",
                     "Bestelldatum": "20180210",
-                    "KID_kID": "k1",
+                    "KID_KID": "k1",
                     "SID_SID": "s1"
                 });
                 this.setModel(oOrderModel, "o");
@@ -96,8 +96,6 @@ sap.ui.define(
 				if (oSelected) {
 					var aCells = oSelected.getCells();
 					var sKID = aCells[0].getText();
-
-					console.log(this.getModel("o").getDate());
 
 					var oTable = this.byId("tableOrders");
 					var oBinding = oTable.getBinding("items");
