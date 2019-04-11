@@ -21,7 +21,7 @@ sap.ui.define(
 
                 var oOrderPositionModel = new JSONModel({
                     "PID": "p1",
-                    "Menge": "0",
+                    "Menge": 0,
                     "BID_BID": "b1",
                     "AID_AID": "a1"
                 });
@@ -54,7 +54,6 @@ sap.ui.define(
 						MessageToast.show(error.responseText);
 					}
 				);
-				this.onUpdate();
 			},
 
             onRefreshUser: function () {this.refreshTable("tableCustomers")},
@@ -66,7 +65,7 @@ sap.ui.define(
 				var oBinding = this.byId(tableName).getBinding("items");
 
 				if (oBinding.hasPendingChanges()) {
-					MessageBox.error("Refresh nicht möglich");
+					MessageToast.error("Refresh nicht möglich");
 					return;
 				}
 				oBinding.refresh();
@@ -85,7 +84,7 @@ sap.ui.define(
 					oSelected.getBindingContext("orderMan").delete("$auto").then(function () {
 						MessageToast.show("Löschen erfolgreich");
 					}.bind(this), function (oError) {
-						MessageBox.error(oError.message);
+						MessageToast.error(oError.message);
 					});
 				}
 			},

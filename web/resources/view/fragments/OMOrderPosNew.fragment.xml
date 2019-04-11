@@ -5,7 +5,7 @@
 			<Input id="iPID" type="Text" class="sapUiSmallMarginBottom" value="{op>/PID}"/>
 
 			<Label text="Menge" labelFor="iMenge"/>
-			<Input id="iMenge" type="Text" class="sapUiSmallMarginBottom" value="{op>/Menge}"/>
+			<Input id="iMenge" type="Number" class="sapUiSmallMarginBottom" value="{op>/Menge}"/>
 
 			<Label text="BID" labelFor="iBID"/>
 			<Input id="iBID" type="Text" class="sapUiSmallMarginBottom" value="{op>/BID_BID}"/>
