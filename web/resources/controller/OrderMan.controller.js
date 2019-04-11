@@ -14,7 +14,7 @@ sap.ui.define(
                 var oOrderModel = new JSONModel({
                     "BID": "b1",
                     "Bestelldatum": "20180210",
-                    "KID_SID": "k1",
+                    "KID_kID": "k1",
                     "SID_SID": "s1"
                 });
                 this.setModel(oOrderModel, "o");

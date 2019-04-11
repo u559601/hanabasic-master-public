@@ -8,10 +8,10 @@
 			<Input id="iMenge" type="Text" class="sapUiSmallMarginBottom" value="{op>/Menge}"/>
 
 			<Label text="BID" labelFor="iBID"/>
-			<Input id="iBID" type="Text" class="sapUiSmallMarginBottom" value="{op>/BID}"/>
+			<Input id="iBID" type="Text" class="sapUiSmallMarginBottom" value="{op>/BID_BID}"/>
 
 			<Label text="AID" labelFor="iAID"/>
-			<Input id="iAID" type="Text" class="sapUiSmallMarginBottom" value="{op>/AID}"/>
+			<Input id="iAID" type="Text" class="sapUiSmallMarginBottom" value="{op>/AID_AID}"/>
 
 			<Button text="Anlegen" press="onCreateOrderPos"/>
 		</content>

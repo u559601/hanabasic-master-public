@@ -8,10 +8,10 @@
 			<Input id="iBestelldatum" type="Text" class="sapUiSmallMarginBottom" value="{o>/Bestelldatum}"/>
 
 			<Label text="KID" labelFor="inKID"/>
-			<Input id="inKID" type="Text" class="sapUiSmallMarginBottom" disabled="true" value="{o>/KID}" />
+			<Input id="inKID" type="Text" class="sapUiSmallMarginBottom" disabled="true" value="{o>/KID_KID}" />
 
 			<Label text="SID" labelFor="iSID"/>
-			<Input id="iSID" type="Text" class="sapUiSmallMarginBottom" value="{o>/SID}"/>
+			<Input id="iSID" type="Text" class="sapUiSmallMarginBottom" value="{o>/SID_SID}"/>
 
 			<Button text="Anlegen" press="onCreateOrder"/>
 		</content>
