@@ -2,7 +2,7 @@
   <Panel headerText="Artikeltabelle" class="sapUiResponsiveMargin" width="auto">
     <content>
       <Table id="tableArtikel" growing="true" growingThreshold="6"
-        items="{
+             items="{
           path: 'orderMan>/Artikeln',
           parameters : {
         	$$operationMode : 'Server'
@@ -10,23 +10,7 @@
 		  sorter: {
 				path: 'AID'
 		  }
-        }"
-             mode="SingleSelectLeft"
-             selectionChange="">
-        <headerToolbar>
-          <OverflowToolbar>
-            <content>
-              <Button
-                      icon="sap-icon://refresh"
-                      tooltip="Refresh"
-                      press="onRefreshArtikel"/>
-              <Button
-                      icon="sap-icon://delete"
-                      tooltip="Delete"
-                      press="onDeleteArtikel"/>
-            </content>
-          </OverflowToolbar>
-        </headerToolbar>
+        }">
         <columns>
           <Column id="iAidColumn">
             <Text text="AID" />

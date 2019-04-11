@@ -2,7 +2,7 @@
   <Panel headerText="Bestellpositiontabelle" class="sapUiResponsiveMargin" width="auto">
     <content>
       <Table id="tableOrdersPos" growing="true" growingThreshold="6"
-        items="{
+             items="{
           path: 'orderMan>/Bestellpositionen',
           parameters : {
         	$$operationMode : 'Server'
