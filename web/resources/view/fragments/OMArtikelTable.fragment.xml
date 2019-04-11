@@ -12,10 +12,10 @@
 		  }
         }">
         <columns>
-          <Column id="aidColumn">
+          <Column id="iAidColumn">
             <Text text="AID" />
           </Column>
-          <Column id="beschreibungColumn">
+          <Column id="iBeschreibungColumn">
             <Text text="Beschreibung" />
           </Column>
         </columns>
