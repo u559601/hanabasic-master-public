@@ -40,7 +40,7 @@ sap.ui.define(
 
 			onCreateOrderPos: function () {
 				var orderposition = this.getModel("op").getData();
-				orderposition.Menge = Integer.valueOf(orderposition.Menge);
+				orderposition.Menge = parseInt(orderposition.Menge);
 				orderposition.BID_BID = this.getSelectedItemId("tableOrders");
 				orderposition.AID_AID = this.getSelectedItemId("tableArtikel");
 				this.onCreateItem(orderposition,"tableOrdersPos", "Bestellposition");},
