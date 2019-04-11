@@ -9,6 +9,8 @@
 				</HBox>
 				<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderTable" type="XML"/>
 				<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMOrderPosTable" type="XML"/>
+				<core:Fragment fragmentName="de.htwberlin.adbkt.basic1.view.fragments.OMArtikelTable" type="XML"/>
+
 			</VBox>
 		</content>
 	</Page>

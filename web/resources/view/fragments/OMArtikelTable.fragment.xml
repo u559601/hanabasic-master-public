@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Panel headerText="Artikeltabelle" class="sapUiResponsiveMargin" width="auto">
+    <content>
+      <Table id="tableArtikel" growing="true" growingThreshold="6"
+        items="{
+          path: 'orderMan>/Artikel',
+          parameters : {
+        	$$operationMode : 'Server'
+          },
+		  sorter: {
+				path: 'AID'
+		  }
+        }">
+        <columns>
+          <Column id="aidColumn">
+            <Text text="AID" />
+          </Column>
+          <Column id="beschreibungColumn">
+            <Text text="Beschreibung" />
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{orderMan>AID}" />
+            </cells>
+            <cells>
+              <Text text="{orderMan>Beschreibung}" />
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+  </Panel>
+</core:FragmentDefinition>
