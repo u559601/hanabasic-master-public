@@ -25,7 +25,7 @@ sap.ui.define(
                 this.setModel(oOrderPositionModel, "op");
 
                 var oArtikelModel = new JSONModel({
-                    "AID": "a",
+                    "AID": "a1",
                     "Beschreibung": "..."
                 });
                 this.setModel(oArtikelModel, "a");
@@ -53,6 +53,7 @@ sap.ui.define(
 			},
 
 			onCreateItem: function (newItem, tableId, message) {
+				console.log("save :" + newItem);
 				// var oOdataModel = this.getModel("orderMan");
 				var oBinding = this.byId(tableId).getBinding("items");
 				var oContext = oBinding.create(newItem);
