@@ -13,17 +13,15 @@ sap.ui.define(
 
                 var oOrderModel = new JSONModel({
                     "BID": "b1",
-                    "Bestelldatum": "20180210",
-                    "KID_KID": "k1",
+                    "Bestelldatum": "2018-02-10",
                     "SID_SID": "s1"
                 });
                 this.setModel(oOrderModel, "o");
 
                 var oOrderPositionModel = new JSONModel({
-                    "PID": "p1",
-                    "Menge": 0,
-                    "BID_BID": "b1",
-                    "AID_AID": "a1"
+                    "PID": "p",
+                    "Menge": 1,
+                    "AID_AID": "a"
                 });
                 this.setModel(oOrderPositionModel, "op");
 
@@ -34,26 +32,36 @@ sap.ui.define(
                 this.setModel(oArtikelModel, "a");
 			},
 
-			onCreateCustomer: function () { this.onCreateItem("c","tableCustomers");},
-			onCreateArtikel: function () { this.onCreateItem("a","tableArtikel");},
-			onCreateOrder: function () { this.onCreateItem("o","tableOrders");},
-			onCreateOrderPos: function () { this.onCreateItem("op","tableOrdersPos");},
+			onCreateCustomer: function () { this.onCreateItem(this.getModel("c"),"tableCustomers", "Kunden");},
+			onCreateArtikel: function () { this.onCreateItem(this.getModel("a"),"tableArtikel", "Artikel");},
+			onCreateOrder: function () {
+				var order = this.getModel("o").getData();
+				order.KID_KID = this.getSelectedItemId("tableCustomers");
+				this.onCreateItem(order,"tableOrders", "Bestellung");},
+			onCreateOrderPos: function () { this.onCreateItem(this.getModel("op"),"tableOrdersPos", "Bestellposition");},
 
+			getSelectedItemId: function (tableId) {
+				var oSelected = this.byId(tableId).getSelectedItem();
+				if (oSelected) {
+					var aCells = oSelected.getCells();
+					 return aCells[0].getText();
+				}
+			},
 
-			onCreateItem: function (modelName, tableId) {
+			onCreateItem: function (oNewItem, tableId, message) {
 				// var oOdataModel = this.getModel("orderMan");
-				var oNewItem = this.getModel(modelName).getData();
 				var oBinding = this.byId(tableId).getBinding("items");
 				var oContext = oBinding.create(oNewItem);
 
 				oContext.created().then(
 					function () {
-						MessageToast.show(trigger + ' angelegt.');
+						MessageToast.show(message + ' angelegt.');
 					},
 					function (error) {
 						MessageToast.show(error.responseText);
 					}
 				);
+				this.refreshTable(tableId);
 			},
 
             onRefreshUser: function () {this.refreshTable("tableCustomers")},
@@ -61,8 +69,8 @@ sap.ui.define(
 			onRefreshOrderPos: function () {this.refreshTable("tableOrdersPos")},
 			onRefreshArtikel: function () {this.refreshTable("tableArtikel")},
 
-			refreshTable: function (tableName) {
-				var oBinding = this.byId(tableName).getBinding("items");
+			refreshTable: function (tableId) {
+				var oBinding = this.byId(tableId).getBinding("items");
 
 				if (oBinding.hasPendingChanges()) {
 					MessageToast.error("Refresh nicht möglich");
