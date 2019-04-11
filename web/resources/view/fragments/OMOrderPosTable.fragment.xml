@@ -16,8 +16,7 @@
 				path: 'PID'
 		  }
         }"
-             mode="SingleSelectLeft"
-             selectionChange="">
+             mode="SingleSelectLeft">
         <headerToolbar>
           <OverflowToolbar>
             <content>

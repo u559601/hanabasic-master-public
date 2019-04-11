@@ -120,6 +120,19 @@ sap.ui.define(
 					});
 					oBinding.filter(oFilter);
 				}
+			},
+
+			onOrderSelectionChange: function () {
+				var sBID = this.getSelectedItemId(tableOrders);
+
+				var oBinding = this.byId("tableOrdersPos").getBinding("items");
+				var oFilter = new sap.ui.model.Filter({
+					path: "BID_BID",
+					operator: sap.ui.model.FilterOperator.EQ,
+					value1: sBID
+				});
+				oBinding.filter(oFilter);
+
 			}
 		});
 
