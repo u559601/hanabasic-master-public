@@ -7,9 +7,6 @@
 			<Label text="Menge" labelFor="iMenge"/>
 			<Input id="iMenge" type="Integer" class="sapUiSmallMarginBottom" value="{op>/Menge}"/>
 
-			<Label text="BID" labelFor="iBID"/>
-			<Input id="iBID" type="Text" class="sapUiSmallMarginBottom" value="{op>/BID_BID}"/>
-
 			<Label text="AID" labelFor="iAID"/>
 			<Input id="iAID" type="Text" class="sapUiSmallMarginBottom" value="{op>/AID_AID}"/>
 

@@ -38,7 +38,11 @@ sap.ui.define(
 				var order = this.getModel("o").getData();
 				order.KID_KID = this.getSelectedItemId("tableCustomers");
 				this.onCreateItem(order,"tableOrders", "Bestellung");},
-			onCreateOrderPos: function () { this.onCreateItem(this.getModel("op"),"tableOrdersPos", "Bestellposition");},
+
+			onCreateOrderPos: function () {
+				var orderposition = this.getModel("op").getData();
+				orderposition.BID_BID = this.getSelectedItemId("tableOrders");
+				this.onCreateItem(orderposition,"tableOrdersPos", "Bestellposition");},
 
 			getSelectedItemId: function (tableId) {
 				var oSelected = this.byId(tableId).getSelectedItem();
