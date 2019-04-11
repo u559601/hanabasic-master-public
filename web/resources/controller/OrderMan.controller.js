@@ -10,6 +10,28 @@ sap.ui.define(
 					"Name": "Name"
 				});
 				this.setModel(oCustomerModel, "c");
+
+                var oOrderModel = new JSONModel({
+                    "BID": "b1",
+                    "Bestelldatum": "20180210",
+                    "KID": "k1",
+                    "SID": "s1"
+                });
+                this.setModel(oOrderModel, "o");
+
+                var oOrderPositionModel = new JSONModel({
+                    "PID": "p1",
+                    "Menge": "0",
+                    "BID": "b1",
+                    "AID": "a1"
+                });
+                this.setModel(oOrderPositionModel, "op");
+
+                var oArtikelModel = new JSONModel({
+                    "AID": "a1",
+                    "Beschreibung": "..."
+                });
+                this.setModel(oArtikelModel, "a");
 			},
 
 			onCreateUser: function (oEvent) {
