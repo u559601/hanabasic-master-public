@@ -52,10 +52,12 @@ sap.ui.define(
 				}
 			},
 
-			onCreateItem: function (oNewItem, tableId, message) {
+			onCreateItem: function (newItem, tableId, message) {
 				// var oOdataModel = this.getModel("orderMan");
 				var oBinding = this.byId(tableId).getBinding("items");
-				var oContext = oBinding.create(oNewItem);
+				var oContext = oBinding.create(newItem);
+
+				console.log("JSON:" + JSON.stringify(newItem));
 
 				oContext.created().then(
 					function () {
