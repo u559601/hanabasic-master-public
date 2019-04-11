@@ -39,5 +39,31 @@
     },
     "import_settings": {"include_filter" : [ ], "import_columns": ["BID", "BESTELLDATUM", "KID_KID", "SID_SID"]},
     "column_mappings": {"BID": 1, "BESTELLDATUM": 2, "KID_KID": 3, "SID_SID": 4}
+  }, {
+    "target_table": "BESTELLPOSITION",
+    "source_data": {
+      "data_type": "CSV",
+      "file_name": "data_bestellposition.csv",
+      "has_header": true,
+      "dialect": "HANA",
+      "type_config": {
+        "delimiter": ","
+      }
+    },
+    "import_settings": {"include_filter" : [ ], "import_columns": ["PID", "MENGE", "BID_BID", "AID_AID"]},
+    "column_mappings": {"PID": 1, "MENGE": 2, "BID_BID": 3, "AID_AID": 4}
+  }, {
+    "target_table": "ARTIKEL",
+    "source_data": {
+      "data_type": "CSV",
+      "file_name": "data_artikel.csv",
+      "has_header": true,
+      "dialect": "HANA",
+      "type_config": {
+        "delimiter": ","
+      }
+    },
+    "import_settings": {"include_filter" : [ ], "import_columns": ["AID", "BESCHREIBUNG"]},
+    "column_mappings": {"AID": 1, "BESCHREIBUNG": 2}
   }]
 }
