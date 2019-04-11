@@ -63,10 +63,10 @@ sap.ui.define(
 						MessageToast.show(message + ' angelegt.');
 					},
 					function (error) {
+						console.log(error.responseText);
 						MessageToast.show(error.responseText);
 					}
 				);
-				this.refreshTable(tableId);
 			},
 
             onRefreshUser: function () {this.refreshTable("tableCustomers")},
@@ -78,7 +78,7 @@ sap.ui.define(
 				var oBinding = this.byId(tableId).getBinding("items");
 
 				if (oBinding.hasPendingChanges()) {
-					MessageToast.error("Refresh nicht möglich");
+					MessageToast.show("Refresh nicht möglich");
 					return;
 				}
 				oBinding.refresh();
@@ -97,7 +97,8 @@ sap.ui.define(
 					oSelected.getBindingContext("orderMan").delete("$auto").then(function () {
 						MessageToast.show("Löschen erfolgreich");
 					}.bind(this), function (oError) {
-						MessageToast.error(oError.message);
+						console.log(oError.message);
+						MessageToast.show(oError.message);
 					});
 				}
 			},
