@@ -97,6 +97,8 @@ sap.ui.define(
 					var aCells = oSelected.getCells();
 					var sKID = aCells[0].getText();
 
+					console.log(this.getModel("o").getDate());
+
 					var oTable = this.byId("tableOrders");
 					var oBinding = oTable.getBinding("items");
 
